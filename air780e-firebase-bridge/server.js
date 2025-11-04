@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 
-const FIREBASE_URL = "https://water-district-b59bf-default-rtdb.asia-southeast1.firebasedatabase.app/sensors.json";
+const FIREBASE_URL = process.env.FIREBASE_URL;
 
 // === ROUTE TO RECEIVE DATA FROM AIR780E ===
 app.post("/update", async (req, res) => {
